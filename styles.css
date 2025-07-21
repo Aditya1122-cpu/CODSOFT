@@ -1,0 +1,117 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #a3cef1 0%, #e0c3fc 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+}
+
+.calc-glass {
+  background: rgba(255,255,255,0.20);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.18);
+  width: 340px;
+  padding: 2.2rem 1.3rem 1.1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.calc-header {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #335;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: .3rem;
+}
+
+.calc-author {
+  font-size: 0.85rem;
+  color: #7781a7;
+  font-style: italic;
+}
+
+.calc-display {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: right;
+  background: rgba(255,255,255,0.36);
+  color: #222f44;
+  box-shadow: 0 1px 4px #0001 inset;
+  margin-bottom: .8rem;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .7rem;
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  font-size: 1.22rem;
+  padding: 0.8em 0;
+  background: rgba(255,255,255,0.43);
+  box-shadow: 0 2px 8px #cfcafc14;
+  cursor: pointer;
+  color: #334455;
+  transition: background .14s, color .14s, box-shadow .14s;
+  outline: none;
+}
+
+button:active,
+button:focus {
+  background: #d1c4e9;
+}
+
+.operator {
+  background: #7d5fff;
+  color: #fff;
+}
+
+.operator:active,
+.operator:focus {
+  background: #4e38b5;
+}
+
+.equals {
+  background: #ff8756;
+  color: #fff;
+  grid-column: span 1;
+}
+
+.equals:active,
+.equals:focus {
+  background: #bb421b;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.calc-footer {
+  text-align: center;
+  color: #556;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: .8rem;
+}
+
+@media (max-width: 400px) {
+  .calc-glass { width: 96vw; padding: 1rem; }
+  .calc-header { font-size: 1.05rem; }
+  .calc-display { font-size: 1.2rem; padding: .7rem; }
+}
